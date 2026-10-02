@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nhà Lumi — Đồ gia dụng tinh gọn, giao nhanh 2 giờ</title>
+<meta name="description" content="Nhà Lumi – sàn thương mại điện tử đồ gia dụng và decor tuyển chọn. Chính hãng 100%, giao nhanh 2 giờ nội thành, đổi trả 30 ngày miễn phí.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nhà Lumi — Sống gọn, sống đẹp mỗi ngày">
+<meta property="og:description" content="Đồ gia dụng & decor tuyển chọn. Giao nhanh 2 giờ, đổi trả 30 ngày.">
+<meta property="og:image" content="https://example.com/og-lumi.jpg">
+<meta property="og:url" content="https://nhalumi.vn">
+<meta property="og:locale" content="vi_VN">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#16201c; --muted:#5b6862; --bg:#f7f4ee; --card:#ffffff;
+  --brand:#1f5c4a; --brand-2:#2f7d64; --accent:#ff7a4d; --line:#e6e1d6;
+  --radius:18px; --shadow:0 10px 30px -12px rgba(22,32,28,.18);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:'Be Vietnam Pro',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.container{width:min(1160px,100% - 32px);margin-inline:auto}
+section{padding:96px 0}
+.eyebrow{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+h2{font-size:clamp(1.8rem,3.6vw,2.6rem);line-height:1.2;font-weight:800;letter-spacing:-.02em;margin-bottom:16px}
+.lead{color:var(--muted);max-width:620px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:999px;font-weight:700;border:0;cursor:pointer;font-family:inherit;font-size:1rem;transition:transform .2s,box-shadow .2s,background .2s}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 10px 24px -8px rgba(255,122,77,.6)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 28px -8px rgba(255,122,77,.7)}
+.btn-ghost{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35)}
+.btn-ghost:hover{background:rgba(255,255,255,.22)}
+
+/* Header */
+header{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,box-shadow .3s}
+header.scrolled{background:rgba(247,244,238,.92);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.3rem;color:#fff;transition:color .3s}
+.logo-mark{width:34px;height:34px;border-radius:10px;background:var(--accent);display:grid;place-items:center;color:#fff;font-size:1.1rem}
+header.scrolled .logo,header.scrolled .menu a{color:var(--ink)}
+.menu{display:flex;gap:34px;list-style:none;align-items:center}
+.menu a{color:rgba(255,255,255,.9);font-weight:500;position:relative;transition:color .3s}
+.menu a::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--accent);transition:width .25s}
+.menu a:hover::after{width:100%}
+.menu .btn{padding:10px 20px;color:#fff!important}
+.menu .btn::after{display:none}
+.burger{display:none;background:none;border:0;width:40px;height:40px;cursor:pointer;position:relative}
+.burger span{position:absolute;left:8px;right:8px;height:2px;background:#fff;border-radius:2px;transition:.3s}
+.burger span:nth-child(1){top:13px}.burger span:nth-child(2){top:19px}.burger span:nth-child(3){top:25px}
+header.scrolled .burger span,header.open .burger span{background:var(--ink)}
+header.open .burger span:nth-child(1){top:19px;transform:rotate(45deg)}
+header.open .burger span:nth-child(2){opacity:0}
+header.open .burger span:nth-child(3){top:19px;transform:rotate(-45deg)}
+
+/* Hero */
+.hero{min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;color:#fff;position:relative;overflow:hidden;
+  background:radial-gradient(circle at 85% 20%,rgba(255,122,77,.35),transparent 40%),linear-gradient(135deg,#123a2f 0%,var(--brand) 55%,var(--brand-2) 100%)}
+.hero::before{content:"";position:absolute;width:600px;height:600px;border-radius:50%;border:1px solid rgba(255,255,255,.08);right:-160px;bottom:-240px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;position:relative}
+.badge{display:inline-flex;gap:8px;align-items:center;padding:7px 14px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);font-size:.85rem;margin-bottom:24px}
+.badge i{width:8px;height:8px;border-radius:50%;background:#7dffb8;box-shadow:0 0 0 4px rgba(125,255,184,.2)}
+.hero h1{font-size:clamp(2.3rem,5.4vw,4rem);line-height:1.08;font-weight:800;letter-spacing:-.03em;margin-bottom:22px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{font-size:1.12rem;opacity:.85;max-width:520px;margin-bottom:36px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.trust{display:flex;gap:28px;margin-top:44px;font-size:.9rem;opacity:.85;flex-wrap:wrap}
+.trust span{display:flex;align-items:center;gap:8px}
+.hero-visual{position:relative;aspect-ratio:4/5;border-radius:28px;background:linear-gradient(160deg,#f3d9c8,#e9b99c);box-shadow:0 40px 80px -30px rgba(0,0,0,.5);display:grid;place-items:center;overflow:hidden}
+.hero-visual svg{width:70%;opacity:.9}
+.float-card{position:absolute;background:#fff;color:var(--ink);border-radius:16px;padding:14px 18px;box-shadow:var(--shadow);font-size:.85rem;animation:bob 5s ease-in-out infinite}
+.float-card b{display:block;font-size:1.1rem}
+.fc1{left:-28px;top:14%}.fc2{right:-20px;bottom:12%;animation-delay:-2.5s}
+@keyframes bob{50%{transform:translateY(-10px)}}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.about-text p{color:var(--muted);margin-bottom:16px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.stat{background:var(--card);border-radius:var(--radius);padding:30px 26px;border:1px solid var(--line)}
+.stat:nth-child(1){background:var(--brand);color:#fff;border:0}
+.stat strong{display:block;font-size:2.6rem;font-weight:800;letter-spacing:-.03em;line-height:1}
+.stat span{font-size:.92rem;opacity:.75;display:block;margin-top:8px}
+
+/* Products */
+#san-pham{background:#fff}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:48px;flex-wrap:wrap}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.product{background:var(--bg);border-radius:var(--radius);overflow:hidden;transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column}
+.product:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.thumb{aspect-ratio:4/3;display:grid;place-items:center;position:relative}
+.thumb svg{width:42%;opacity:.85}
+.tag{position:absolute;top:14px;left:14px;background:var(--accent);color:#fff;font-size:.75rem;font-weight:700;padding:5px 11px;border-radius:999px}
+.p-body{padding:22px 24px 26px;display:flex;flex-direction:column;flex:1}
+.p-body small{color:var(--muted);font-weight:500}
+.p-body h3{font-size:1.15rem;margin:4px 0 10px}
+.price{display:flex;align-items:baseline;gap:10px;margin-top:auto}
+.price b{font-size:1.3rem;color:var(--brand)}
+.price s{color:var(--muted);font-size:.9rem}
+.rating{color:#f5a524;font-size:.85rem;margin-bottom:14px}
+.rating span{color:var(--muted)}
+
+/* Reviews */
+.reviews .grid{margin-top:48px}
+.review{background:var(--card);border-radius:var(--radius);padding:32px;border:1px solid var(--line);position:relative}
+.review::before{content:"“";position:absolute;right:24px;top:6px;font-size:5rem;color:var(--accent);opacity:.2;font-weight:800;line-height:1}
+.review p{margin:14px 0 24px}
+.who{display:flex;align-items:center;gap:14px}
+.avatar{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:700;flex-shrink:0}
+.who b{display:block}.who small{color:var(--muted)}
+
+/* Contact */
+#lien-he{background:var(--brand);color:#fff}
+#lien-he .lead{color:rgba(255,255,255,.75)}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.info{list-style:none;margin-top:36px;display:grid;gap:22px}
+.info li{display:flex;gap:16px;align-items:flex-start}
+.info .ic{width:46px;height:46px;border-radius:12px;background:rgba(255,255,255,.1);display:grid;place-items:center;flex-shrink:0}
+.info small{opacity:.65;display:block;font-size:.82rem}
+form{background:#fff;color:var(--ink);border-radius:24px;padding:36px;box-shadow:0 30px 60px -30px rgba(0,0,0,.45)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{margin-bottom:16px}
+label{display:block;font-size:.88rem;font-weight:600;margin-bottom:6px}
+input,textarea{width:100%;padding:13px 16px;border:1.5px solid var(--line);border-radius:12px;font:inherit;background:var(--bg);transition:border .2s,background .2s}
+input:focus,textarea:focus{outline:0;border-color:var(--brand-2);background:#fff}
+textarea{resize:vertical;min-height:110px}
+.field.invalid input,.field.invalid textarea{border-color:#e5484d}
+.err{color:#e5484d;font-size:.8rem;margin-top:4px;display:none}
+.field.invalid .err{display:block}
+form .btn{width:100%;justify-content:center}
+.success{display:none;text-align:center;padding:40px 10px}
+.success .check{width:70px;height:70px;border-radius:50%;background:#e6f5ee;color:var(--brand-2);display:grid;place-items:center;margin:0 auto 18px}
+form.sent .form-inner{display:none}form.sent .success{display:block}
+
+/* Footer */
+footer{background:#0f2821;color:rgba(255,255,255,.75);padding:56px 0 28px}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.1)}
+footer .logo{color:#fff}
+.hotline{display:flex;align-items:center;gap:12px;background:var(--accent);color:#fff;padding:12px 22px;border-radius:999px;font-weight:700;font-size:1.1rem}
+.social{display:flex;gap:12px}
+.social a{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.08);display:grid;place-items:center;transition:background .2s,transform .2s}
+.social a:hover{background:var(--accent);transform:translateY(-3px)}
+.social svg{width:18px;height:18px;fill:#fff}
+.copy{padding-top:24px;font-size:.85rem;text-align:center}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.float-card{animation:none}html{scroll-behavior:auto}}
+
+/* Responsive */
+@media (max-width:960px){
+  .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+  .hero-visual{max-width:420px;width:100%;margin-inline:auto}
+  .grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  section{padding:72px 0}
+  .burger{display:block}
+  .menu{position:fixed;top:72px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);padding:8px 16px 20px;box-shadow:0 20px 30px -20px rgba(0,0,0,.3);transform:translateY(-12px);opacity:0;pointer-events:none;transition:.3s}
+  .menu li{width:100%}
+  .menu a{display:block;color:var(--ink)!important;padding:14px 4px;border-bottom:1px solid var(--line)}
+  .menu .btn{margin-top:14px;justify-content:center;border:0}
+  header.open{background:var(--bg)}
+  header.open .logo{color:var(--ink)}
+  header.open .menu{transform:none;opacity:1;pointer-events:auto}
+  .grid,.row,.stats{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  .fc1{left:8px}.fc2{right:8px}
+  form{padding:26px 20px}
+  .foot{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<header id="header">
+  <nav class="container nav">
+    <a href="#top" class="logo"><span class="logo-mark">L</span>Nhà Lumi</a>
+    <ul class="menu" id="menu">
+      <li><a href="#gioi-thieu">Giới thiệu</a></li>
+      <li><a href="#san-pham">Sản phẩm</a></li>
+      <li><a href="#phan-hoi">Phản hồi</a></li>
+      <li><a href="#lien-he">Liên hệ</a></li>
+      <li><a href="#lien-he" class="btn btn-primary">Mua ngay</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Mở menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<main id="top">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="reveal">
+        <span class="badge"><i></i>Giao nhanh 2 giờ tại TP.HCM & Hà Nội</span>
+        <h1>Sống gọn, sống đẹp — <em>giảm đến 40%</em> cho đơn đầu tiên</h1>
+        <p>Hơn 3.000 món đồ gia dụng & decor chính hãng được tuyển chọn kỹ. Đổi trả miễn phí 30 ngày, không cần lý do.</p>
+        <div class="hero-cta">
+          <a href="#lien-he" class="btn btn-primary">Nhận mã giảm giá ngay →</a>
+          <a href="#san-pham" class="btn btn-ghost">Xem sản phẩm</a>
+        </div>
+        <div class="trust">
+          <span>✓ Chính hãng 100%</span><span>✓ Freeship từ 299K</span><span>✓ Trả góp 0%</span>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <svg viewBox="0 0 200 200" fill="none" stroke="#1f5c4a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M40 90 100 40l60 50v70a10 10 0 0 1-10 10H50a10 10 0 0 1-10-10z"/><path d="M80 170v-50h40v50"/><circle cx="100" cy="85" r="8"/></svg>
+        <div class="float-card fc1">⭐ 4.9/5<b>28.000+ đánh giá</b></div>
+        <div class="float-card fc2">🚚 Đơn vừa giao<b>Quận 7 · 1h42'</b></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="gioi-thieu">
+    <div class="container about-grid">
+      <div class="about-text reveal">
+        <span class="eyebrow">Về chúng tôi</span>
+        <h2>Mua sắm cho ngôi nhà, dễ như một cú chạm</h2>
+        <p>Nhà Lumi ra đời năm 2018 với một mong muốn đơn giản: giúp mỗi gia đình Việt tìm được đồ dùng tốt, đẹp và đáng tiền mà không phải lướt qua hàng nghìn gian hàng kém chất lượng.</p>
+        <p>Mỗi sản phẩm trên Lumi đều được đội ngũ kiểm định trực tiếp trước khi lên kệ. Chúng tôi làm việc thẳng với hơn 150 thương hiệu và nhà sản xuất để giữ giá tốt nhất.</p>
+        <p>Kho vận tự vận hành giúp đơn hàng đến tay bạn chỉ trong 2 giờ tại nội thành, và 1–3 ngày trên toàn quốc.</p>
+      </div>
+      <div class="stats reveal">
+        <div class="stat"><strong><span class="count" data-to="8">0</span>+</strong><span>Năm phát triển</span></div>
+        <div class="stat"><strong><span class="count" data-to="1200">0</span>K+</strong><span>Khách hàng tin dùng</span></div>
+        <div class="stat"><strong><span class="count" data-to="3000">0</span>+</strong><span>Sản phẩm tuyển chọn</span></div>
+        <div class="stat"><strong><span class="count" data-to="98">0</span>%</strong><span>Đơn giao đúng hẹn</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section id="san-pham">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div><span class="eyebrow">Bán chạy tuần này</span><h2>Sản phẩm nổi bật</h2></div>
+        <p class="lead">Được hàng nghìn khách hàng chọn mua và đánh giá cao nhất tháng.</p>
+      </div>
+      <div class="grid" id="products"></div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="phan-hoi" class="reviews">
+    <div class="container">
+      <div class="reveal" style="text-align:center">
+        <span class="eyebrow">Phản hồi khách hàng</span>
+        <h2>Hơn 1 triệu khách hàng hài lòng</h2>
+        <p class="lead" style="margin-inline:auto">Những chia sẻ thật từ khách hàng đã mua sắm tại Nhà Lumi.</p>
+      </div>
+      <div class="grid">
+        <div class="review reveal">
+          <div class="rating">★★★★★</div>
+          <p>“Đặt buổi sáng, trưa đã nhận được nồi chiên. Đóng gói cực kỳ cẩn thận, hàng đúng mô tả. Sẽ ủng hộ dài dài!”</p>
+          <div class="who"><div class="avatar" style="background:#2f7d64">NH</div><div><b>Nguyễn Thu Hà</b><small>Nhân viên văn phòng, TP.HCM</small></div></div>
+        </div>
+        <div class="review reveal">
+          <div class="rating">★★★★★</div>
+          <p>“Mình đổi một chiếc đèn bị lệch màu, chỉ mất 5 phút thao tác, shipper đến lấy tận nhà. Dịch vụ quá chuyên nghiệp.”</p>
+          <div class="who"><div class="avatar" style="background:#ff7a4d">TM</div><div><b>Trần Minh Khoa</b><small>Kỹ sư phần mềm, Hà Nội</small></div></div>
+        </div>
+        <div class="review reveal">
+          <div class="rating">★★★★★</div>
+          <p>“Đồ decor trên Lumi xinh mà giá mềm hơn nhiều nơi. Mỗi lần có sale là mình săn bộ chăn ga mới cho cả nhà.”</p>
+          <div class="who"><div class="avatar" style="background:#8a6bd1">LA</div><div><b>Lê Ngọc Anh</b><small>Chủ quán cà phê, Đà Nẵng</small></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="lien-he">
+    <div class="container contact-grid">
+      <div class="reveal">
+        <span class="eyebrow">Liên hệ</span>
+        <h2>Nhận mã giảm 40% & tư vấn miễn phí</h2>
+        <p class="lead">Để lại thông tin, đội ngũ Lumi sẽ gửi mã ưu đãi và liên hệ bạn trong vòng 15 phút.</p>
+        <ul class="info">
+          <li><span class="ic">📍</span><div><small>Địa chỉ</small>Tầng 12, 172 Nguyễn Văn Linh, Tân Phong, Quận 7, TP.HCM</div></li>
+          <li><span class="ic">📞</span><div><small>Hotline</small><a href="tel:19006868">1900 6868</a></div></li>
+          <li><span class="ic">✉️</span><div><small>Email</small><a href="mailto:hotro@nhalumi.vn">hotro@nhalumi.vn</a></div></li>
+          <li><span class="ic">🕐</span><div><small>Giờ làm việc</small>T2 – CN: 8:00 – 22:00</div></li>
+        </ul>
+      </div>
+      <form id="form" class="reveal" novalidate>
+        <div class="form-inner">
+          <div class="field"><label for="name">Họ tên *</label><input id="name" name="name" placeholder="Nguyễn Văn A"><div class="err">Vui lòng nhập họ tên (tối thiểu 2 ký tự).</div></div>
+          <div class="row">
+            <div class="field"><label for="phone">Số điện thoại *</label><input id="phone" name="phone" type="tel" placeholder="09xx xxx xxx"><div class="err">Số điện thoại không hợp lệ.</div></div>
+            <div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" placeholder="ban@email.com"><div class="err">Email không hợp lệ.</div></div>
+          </div>
+          <div class="field"><label for="msg">Nội dung</label><textarea id="msg" name="msg" placeholder="Bạn đang quan tâm sản phẩm nào?"></textarea></div>
+          <button class="btn btn-primary" type="submit">Gửi thông tin</button>
+        </div>
+        <div class="success" role="status">
+          <div class="check"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></div>
+          <h3>Đã gửi thành công!</h3>
+          <p style="color:var(--muted);margin-top:8px">Cảm ơn bạn. Mã giảm giá đã được gửi tới email của bạn.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot">
+      <a href="#top" class="logo"><span class="logo-mark">L</span>Nhà Lumi</a>
+      <a href="tel:19006868" class="hotline">📞 Hotline: 1900 6868</a>
+      <div class="social">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v9h4v-9h3l.5-4h-3.5V8.8c0-.5.3-.8.5-.8z"/></svg></a>
+        <a href="#" aria-label="Zalo"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 5.9 2 10.7c0 2.7 1.4 5.1 3.7 6.7L5 22l4.3-2.4c.9.2 1.8.3 2.7.3 5.5 0 10-3.9 10-8.7S17.5 2 12 2zM8.6 13.5H5.8l2.6-3.4H6v-1h3.4v.6L6.8 13h1.8v.5zm2.5 0h-.9V9.1h.9v4.4zm3.8 0h-1l-1.6-2.3v2.3h-.9V9.1h1l1.6 2.3V9.1h.9v4.4zm3.4-2.2c0 1.3-.8 2.3-2 2.3s-2-1-2-2.3.8-2.2 2-2.2 2 1 2 2.2z"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23 7.2s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.3-1C16.5 3.6 12 3.6 12 3.6s-4.5 0-7.8.3c-.5.1-1.4.1-2.3 1C1.2 5.6 1 7.2 1 7.2S.8 9 .8 10.9v1.8c0 1.9.2 3.7.2 3.7s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.6.2 7.6.2s4.5 0 7.8-.3c.5-.1 1.4-.1 2.3-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.7v-1.8C23.2 9 23 7.2 23 7.2zM9.7 15V8.6l6 3.2-6 3.2z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zM21.9 7c-.1-1.6-.4-3-1.6-4.2S17.6 1.2 16 1.1C14.4 1 9.6 1 8 1.1 6.4 1.2 5 1.5 3.8 2.7S2.2 5.4 2.1 7C2 8.6 2 13.4 2.1 15c.1 1.6.4 3 1.6 4.2s2.6 1.5 4.2 1.6c1.6.1 6.4.1 8 0 1.6-.1 3-.4 4.2-1.6s1.5-2.6 1.6-4.2c.1-1.6.1-6.4.2-8zm-2.1 9.7a3.3 3.3 0 0 1-1.8 1.8c-1.3.5-4.3.4-5.7.4s-4.4.1-5.7-.4a3.3 3.3 0 0 1-1.8-1.8c-.5-1.3-.4-4.3-.4-5.7s-.1-4.4.4-5.7A3.300 3.300 0 0 1 6.600 3.500c1.3-.5 4.3-.4 5.700-.4s4.4-.1 5.7.4a3.3 3.3 0 0 1 1.800 1.800c.5 1.300.400 4.300.400 5.700s.100 4.4-.4 5.7z"/></svg></a>
+      </div>
+    </div>
+    <p class="copy">© 2026 Công ty TNHH Thương mại Điện tử Nhà Lumi. Bảo lưu mọi quyền.</p>
+  </div>
+</footer>
+
+<script>
+// Products
+const icons = {
+  pot:'<path d="M20 45h60v25a12 12 0 0 1-12 12H32a12 12 0 0 1-12-12z"/><path d="M12 45h76M40 45V34a10 10 0 0 1 20 0v11"/>',
+  lamp:'<path d="M35 15h30l12 35H23z"/><path d="M50 50v30M35 85h30"/>',
+  bed:'<path d="M10 70V30M90 70V50H10"/><rect x="18" y="38" width="22" height="12" rx="4"/><path d="M10 50h80"/>',
+  chair:'<path d="M30 15h40v40H30zM25 55h50v10H25zM30 65v20M70 65v20"/>',
+  cup:'<path d="M20 30h50v30a20 20 0 0 1-20 20h-10a20 20 0 0 1-20-20z"/><path d="M70 38h8a10 10 0 0 1 0 20h-8"/>',
+  plant:'<path d="M30 60h40l-5 25H35z"/><path d="M50 60V30M50 42c-12 0-18-8-18-18 12 0 18 8 18 18zM50 36c10 0 16-7 16-16-10 0-16 7-16 16z"/>'
+};
+const products = [
+  {cat:'Nhà bếp',name:'Nồi chiên không dầu Lumi Air 6L',price:'1.490.000đ',old:'2.290.000đ',rate:'4.9 (2.1k)',ic:'pot',bg:'#f3e3d3',tag:'-35%'},
+  {cat:'Chiếu sáng',name:'Đèn bàn gốm Bắc Âu cảm ứng',price:'690.000đ',old:'890.000đ',rate:'4.8 (860)',ic:'lamp',bg:'#e3ece6',tag:'Mới'},
+  {cat:'Phòng ngủ',name:'Bộ chăn ga Tencel mát lạnh 5 món',price:'1.190.000đ',old:'1.650.000đ',rate:'4.9 (3.4k)',ic:'bed',bg:'#e7e4f3',tag:'Bán chạy'},
+  {cat:'Nội thất',name:'Ghế thư giãn khung gỗ sồi',price:'2.890.000đ',old:'3.500.000đ',rate:'4.7 (420)',ic:'chair',bg:'#f1eadb'},
+  {cat:'Nhà bếp',name:'Bộ ly sứ men hỏa biến 4 chiếc',price:'390.000đ',old:'520.000đ',rate:'4.8 (1.2k)',ic:'cup',bg:'#f6dfd8',tag:'-25%'},
+  {cat:'Decor',name:'Chậu cây kiểng lá trang trí để bàn',price:'250.000đ',old:'',rate:'4.9 (980)',ic:'plant',bg:'#dfeee2'}
+];
+document.getElementById('products').innerHTML = products.map(p=>`
+  <article class="product reveal">
+    <div class="thumb" style="background:${p.bg}">${p.tag?`<span class="tag">${p.tag}</span>`:''}
+      <svg viewBox="0 0 100 100" fill="none" stroke="#1f5c4a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">${icons[p.ic]}</svg></div>
+    <div class="p-body"><small>${p.cat}</small><h3>${p.name}</h3>
+      <div class="rating">★★★★★ <span>${p.rate}</span></div>
+      <div class="price"><b>${p.price}</b>${p.old?`<s>${p.old}</s>`:''}</div></div>
+  </article>`).join('');
+
+// Header + burger
+const header = document.getElementById('header'), burger = document.getElementById('burger');
+const onScroll = () => header.classList.toggle('scrolled', scrollY > 20);
+addEventListener('scroll', onScroll, {passive:true}); onScroll();
+burger.addEventListener('click', () => {
+  const open = header.classList.toggle('open');
+  burger.setAttribute('aria-expanded', open);
+});
+document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+  const t = document.querySelector(a.getAttribute('href'));
+  if (!t) return;
+  e.preventDefault();
+  header.classList.remove('open'); burger.setAttribute('aria-expanded', false);
+  t.scrollIntoView({behavior:'smooth'});
+}));
+
+// Reveal + counters
+const countUp = el => {
+  const to = +el.dataset.to, dur = 1600, t0 = performance.now();
+  const step = now => {
+    const k = Math.min((now - t0) / dur, 1), v = Math.round(to * (1 - Math.pow(1 - k, 3)));
+    el.textContent = v.toLocaleString('vi-VN');
+    if (k < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+};
+const io = new IntersectionObserver(entries => entries.forEach(en => {
+  if (!en.isIntersecting) return;
+  en.target.classList.add('in');
+  en.target.querySelectorAll('.count').forEach(countUp);
+  io.unobserve(en.target);
+}), {threshold:.15});
+document.querySelectorAll('.reveal').forEach((el, i) => {
+  el.style.transitionDelay = (el.closest('.grid') ? (i % 3) * 0.1 : 0) + 's';
+  io.observe(el);
+});
+
+// Form validation
+const form = document.getElementById('form');
+const rules = {
+  name: v => v.trim().length >= 2,
+  phone: v => /^(0|\+84)(3|5|7|8|9)\d{8}$/.test(v.replace(/[\s.-]/g,'')),
+  email: v => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim())
+};
+const check = input => {
+  const ok = rules[input.name](input.value);
+  input.parentElement.classList.toggle('invalid', !ok);
+  return ok;
+};
+Object.keys(rules).forEach(n => form[n].addEventListener('input', () => {
+  if (form[n].parentElement.classList.contains('invalid')) check(form[n]);
+}));
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const results = Object.keys(rules).map(n => check(form[n]));
+  if (results.every(Boolean)) { form.classList.add('sent'); form.reset(); }
+  else form.querySelector('.invalid input').focus();
+});
+</script>
+</body>
+</html>
